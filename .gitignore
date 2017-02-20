@@ -1,0 +1,13 @@
+current/*.pdf
+current/*.log
+current/*.gz
+current/*.aux
+current/*.cls
+spanish/*.pdf
+spanish/*.log
+spanish/*.gz
+spanish/*.aux
+spanish/*.cls
+template/*
+release-pdf/*
+sample-pdf/*
