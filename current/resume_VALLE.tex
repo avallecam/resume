@@ -1,5 +1,7 @@
 \documentclass[margin,line]{res}
 %\usepackage{fontawesome} %https://tex.stackexchange.com/questions/190927/linkedin-logo-in-latex
+\usepackage{graphicx}
+\renewcommand{\namefont}{\bfseries\LARGE}
 
 \oddsidemargin -.5in
 \evensidemargin -.5in
@@ -24,11 +26,13 @@
       \setlength{\leftmargin}{0.2in}}}{\end{list}}
     
 \begin{document}
-
+%\newlength{\maxmarg}
 \name{\LARGE Andree Valle Campos}
-\address{Calle Tambo Huascar 201, San Miguel, Lima - Peru}
-\address{avallecam@gmail.com, @avallecam, (+51)950951722}
+\address{\includegraphics[scale=.62]{../figure/g_logo.png} \includegraphics[scale=.38]{../figure/s_logo.png} \includegraphics[scale=.16]{../figure/t_logo.png} @avallecam ~ \includegraphics[scale=.6]{../figure/m_logo.png} avallecam@gmail.com ~  \includegraphics[scale=.45]{../figure/w_logo.jpg} (+51)~950~951~722}
+\address{%\hspace{20\maxmarg}
+	~~~~~~~~~~~~~~~~~~~~~~~Calle Tambo Huascar 201, San Miguel. Lima - Peru}
 %\address{\textit{twitter:} @avallecam}
+%\includegraphics[scale=.42]{../figure/g_logo_2.png}
 
 \begin{resume}
 
@@ -36,7 +40,9 @@
 
 \section{\sc Research Interests}% %
 
-Data science approaches to high-dimensional analysis in Genomics, Inmunology and Epidemiology.\\
+Data science approaches to analysis and visualization in Genomics, Inmunology and Epidemiology.\\
+Quantitative biology, Reproducible science, Free software solutions, and Open science projects.\\
+%Data science approaches to high-dimensional analysis in Genomics, Inmunology and Epidemiology.\\
 %Get a position in the field of Bioinformatics with emphasis in high-dimensional omics data analysis.\\
 %Get a position in the field of Data Science with emphasis in public database analysis workflows.\\
 % Get a position in the field of Genomics with emphasis in high-dimensional data analysis.\\
@@ -49,7 +55,6 @@ Data science approaches to high-dimensional analysis in Genomics, Inmunology and
 %aAPPLYED RESEARCH
 %Bioinformatics. Optimization of therapy delivers and signals screening of Bioengineering solutions.\\
 % processing % SynthBio approaches?
-Quantitative biology, Reproducible science, Free software solutions, and Open science projects.\\
 %Quantitative biology, Reproducible science, Free software solutions, and Open-source projects.\\
 
 % microfluidics aims to test hypothesis in more controlled environments about environmnet-sensivite behaviours.
@@ -76,9 +81,15 @@ Quantitative biology, Reproducible science, Free software solutions, and Open sc
 % \textit{In silico} analysis of protein interactions and dynamics.
 
 \section{\sc Education}
-{\bf Universidad Nacional Mayor de San Marcos (UNMSM)}, Lima-Peru \hfill 2011-2015\\%Mar Dec 
-%\vspace*{-.1in}
-BSc. Genetics and Biotechnology\hfill Apr 2016\\
+
+\begin{tabular}{ l l }
+	2011-2015 & Universidad Nacional Mayor de San Marcos (UNMSM), Lima-Peru\\
+	& {\bf BSc. Genetics and Biotechnology}\\
+\end{tabular}\\
+
+%Universidad Nacional Mayor de San Marcos (UNMSM), Lima-Peru \hfill 2011-2015\\%Mar Dec 
+%%\vspace*{-.1in}
+%{\bf BSc. Genetics and Biotechnology}\\%\hfill Apr 2016
 %Average: 14.09. GPA equivalence\footnotemark\textsuperscript{,}\footnotemark: 3.05\\%2.79
 %\footnotetext[1]{https://www.wes.org/gradeconversionguide/index.asp}
 %\footnotetext[2]{http://bioegrad.berkeley.edu/prospectivegrads/gpaconversion}
@@ -101,59 +112,83 @@ BSc. Genetics and Biotechnology\hfill Apr 2016\\
 %\end{center}
 
 
-\section{\sc Research Experience}
+\section{\sc Work History and affiliations}
 
-{\bf Universidad Peruana Cayetano Heredia (UPCH)}, Peru.\\
-Public Health Faculty - Emergent Diseases and Climate Change Unit (EMERGE)\\
-%Facultad de Salud P\'ublica - Unidad de Enfermedades Emergentes\\
-\vspace*{-.1in}
-\begin{list1}
-	\item[] {\em Trainee} \hfill 2017- now\\%Nov Feb 
-	\vspace*{-.1in}
-	\begin{list2} %Job Description%
+\begin{tabular}{ l l l }
+	2017- now & Universidad Peruana Cayetano Heredia (UPCH), Peru.&\\
+	& Emergent Diseases and Climate Change Research Unit (EMERGE).&{\bf Internship}\\
+	2016-2017 & Universidad Nacional de la Amazon\'ia Peruana (UNAP), Peru.&\\
+	& Fundaci\'on para el Desarrollo Sostenible de la Amazon\'ia Baja.&{\bf Consultant}\\
+	2015-2016 & U.S. Naval Medical Research Unit Six (NAMRU-6), Peru.&\\
+	& Dept. of Parasitology, Div. of Immunology and Vaccine Development.&{\bf Thesis stud.}\\
+	%2014-2015 & &{\bf Trainee}\\
+	2012-2015 & Universidad Nacional Mayor de San Marcos (UNMSM), Peru.&\\
+	&Laboratory of Physiology and Animal Reproduction (LFRA).&{\bf Researcher}\\
+\end{tabular}\\
+
+%Universidad Peruana Cayetano Heredia (UPCH), Peru.\\
+%Emergent Diseases and Climate Change Research Unit (EMERGE).
+%Public Health Faculty - %Facultad de Salud P\'ublica - Unidad de Enfermedades Emergentes\\
+%{\bf Internship}.\\%Nov
+%{\em Aim:} Risk factors and spatial cluster analysis from epidemiological surveys. \hfill 2017-now\\
+
+%\vspace*{-.2in}
+%\begin{list1}
+%	\item[] {\bf Trainee} \hfill 2017- now\\%Nov Feb 
+%	\vspace*{-.1in}
+%	\begin{list2} %Job Description%
 		%\item P.I.: Viviana Pinedo-Cancino, PhD. (UNAP)
 		%\item Project: IgG antibodies as predictors of transmission and emergence of malaria.%%\\
-		\item Aim: Risk factors and spatial cluster analysis from epidemiological surveys.\\% by Dose-response analysis %Implemntation of a Reproducible workflow
+%		\item Aim: Risk factors and spatial cluster analysis from epidemiological surveys.\\% by Dose-response analysis %Implemntation of a Reproducible workflow
 		% Naturally acquired antibody profiles.
 		%%% in Patients with Severe vivax malaria symptomatology!!!!
-	\end{list2}
-\end{list1}
+%	\end{list2}
+%\end{list1}
 
-{\bf Universidad Nacional de la Amazon\'ia Peruana (UNAP)}, Peru.\\
-Fundaci\'on para el Desarrollo Sostenible de la Amazon\'ia Baja (FUNDESAB)\\
+%Universidad Nacional de la Amazon\'ia Peruana (UNAP), Peru.\\
+%Fundaci\'on para el Desarrollo Sostenible de la Amazon\'ia Baja (Fundesab). %\\
+%{\bf Consultant}.\\%Nov Feb 
+%{\em Work:} ELISA plates standardization for large-scale serological surveillance. \hfill 2016-2017\\
 %Facultad de Salud P\'ublica - Unidad de Enfermedades Emergentes\\
-\vspace*{-.1in}
-\begin{list1}
-	\item[] {\em Consultant} \hfill 2016- now\\%Nov Feb 
-	\vspace*{-.1in}
-	\begin{list2} %Job Description%
+
+%\vspace*{-.2in}
+%\begin{list1}
+%	\item[] {\em Consultant} \hfill 2016-2017\\%Nov Feb 
+%	\vspace*{-.1in}
+%	\begin{list2} %Job Description%
 		%\item P.I.: Viviana Pinedo-Cancino, PhD. (UNAP)
 		%\item Project: IgG antibodies as predictors of transmission and emergence of malaria.%%\\
-		\item Work: ELISA plates standardization for high-throughput sero-surveillance.\\%using R% by Dose-response analysis %Implemntation of a Reproducible workflow
+%		\item Work: ELISA plates standardization for large-scale serological surveillance.\\
+		%\item Work: ELISA plates standardization for high-throughput sero-surveillance.\\%using R% by Dose-response analysis %Implemntation of a Reproducible workflow
 		% Naturally acquired antibody profiles.
 		%%% in Patients with Severe vivax malaria symptomatology!!!!
-	\end{list2}
-\end{list1}
+%	\end{list2}
+%\end{list1}
 
-{\bf U.S. Naval Medical Research Unit Six (NAMRU-6)}, Peru.\\
-Department of Parasitology - Division of Immunology and Vaccine Development\\
-\vspace*{-.1in}
-\begin{list1}
-	\item[] {\em Thesis student} \hfill 2015-2016\\%Ago Dec 
-	\vspace*{-.1in}
-	\begin{list2} %Job Description%
+%U.S. Naval Medical Research Unit Six (NAMRU-6), Peru.\\
+%Dept. of Parasitology, Div. of Immunology and Vaccine Development. 
+%{\bf Thesis student}.\\%Ago Dec 
+%{\em Project:} Antibody response against \textit{Plasmodium vivax} using protein microarray. \hfill 2015-2016\\
+%{\em Trainee experience:} Literature review meetings. Independent bioinformatic research.\hfill 2014-2015\\
+
+%\vspace*{-.2in}
+%\begin{list1}
+%	\item[] {\em Thesis student} \hfill 2015-2016\\%Ago Dec 
+%	\vspace*{-.1in}
+%	\begin{list2} %Job Description%
 		%\item Advisor: G. Christian Baldeviano, PhD.
-		\item Project: Large screening of antibody response against \textit{Plasmodium vivax} malaria.\\
+%		\item Project: Antibody response against \textit{Plasmodium vivax} using protein microarray.\\
+		%\item Project: Large screening of antibody response against \textit{Plasmodium vivax} malaria.\\
 		%Project title: High-throughput Immunomics and Bioinformatics approach for the discovery of new antigenic determinants associated with protection against severe malaria\\
 		% Naturally acquired antibody profiles.
 		%%% in Patients with Severe vivax malaria symptomatology!!!!
-	\end{list2}
+%	\end{list2}
 %%%%%%
-	\vspace*{-.1in}
-	\item[] {\em Trainee} \hfill 2014-2015\\%Jan Jul 
-	\vspace*{-.1in}
-	\begin{list2} %Job Description%
-		\item Experience: Literature review meetings. Independent research in bioinformatics.\\%Critical 
+%	\vspace*{-.1in}
+%	\item[] {\em Trainee} \hfill 2014-2015\\%Jan Jul 
+%	\vspace*{-.1in}
+%	\begin{list2} %Job Description%
+%		\item Experience: Literature review meetings. Independent research in bioinformatics.\\%Critical 
 		%through applications in Biostatistics, Bioinformatics and \textit{in silico} Molecular Biology.
 		%in \textit{Biostatistics} (microarray data analysis), 
 		%\textit{Bioinformatics} (Image analysis of peptide arrays and phylogenetics), 
@@ -161,8 +196,8 @@ Department of Parasitology - Division of Immunology and Vaccine Development\\
 		%and \textit{Immunoassays} (DELI assay dose-response analysis of parasite growth against drug exposure).
 		%colorimetric (...) for the detection of parasite growth biomarkers in response to drug
 		% phylogenetics of selected candidates % cloning of candidates
-	\end{list2}
-\end{list1}
+%	\end{list2}
+%\end{list1}
 
 %{\bf Universidad Nacional Mayor de San Marcos (UNMSM)}, Peru.\\
 %Laboratory of Physiology and Animal Reproduction\\
@@ -174,7 +209,7 @@ Department of Parasitology - Division of Immunology and Vaccine Development\\
 		%\item Advisor: Mg. Martha Valdivia Cuya
 %		\item Experience: Grant proposal writing. Collaborative team-oriented laboratory research. %%of projects focusing in the reproductive problems of the Andean camelid Alpaca (\textit{Vicugna pacos}). %%
 %		\item Main Project: In vitro effect of ELF-magnetic fields on sperm motility of Alpaca.\\ %%Biochemical evaluation of sperm reproductive quality after ELF-Magnetic Fields exposure.
-%		%\item 2015 Project: Mithocondrial activity after sperm capacitation in Alpaca.
+%		%\item 2015 Project: Mitochondrial activity after sperm capacitation in Alpaca.
 %		%\item 2014 Project: In vitro effect of ELF-Magnetic Fields on sperm motility of Alpaca.
 %		%\item 2013 Project: Analysis of \textit{CatSper} gene expression in mice exposed to ELF-Magnetic Fields.
 %		%\item 2012 Project: Cryopreservation of Spermatogonial Stem Cells of Alpaca.\\ %(\textit{Vicugna pacos})
@@ -182,31 +217,72 @@ Department of Parasitology - Division of Immunology and Vaccine Development\\
 %	\end{list2}
 %\end{list1}
 
-\section{\sc Data Science Skills}%Experienced in the Statistical computing software...
-\begin{tabular}{ l l }
-	{\bf Software}: &  R +packages:\\ %%some general-porpuse packages listed\\
-	{\bf Biostatistics}: & \texttt{limma} to test differential expression in DNA/protein microarray data.\\ %of genes
-	%\texttt{Hmisc} package %plus graphical summaries
-	{\bf Modeling}: & \texttt{drc} to iteratively fit 4-parameter log-logistic models to immunoassays.\\
-	{\bf Exploration}: & \texttt{tidyverse} for large dataset mining in genomics and epidemiology.\\% and \texttt{Hmisc}
-	%pipe operators (\texttt{\%>\%}) and regular expressions.\\ %to edit raw strings and factor variables
-	%> tidyverse::tidyverse_packages()
-	%[1] "broom"     "dplyr"     "forcats"   "ggplot2"   "haven"     "httr"     
-	%[7] "hms"       "jsonlite"  "lubridate" "magrittr"  "modelr"    "purrr"    
-	%[13] "readr"     "readxl"    "stringr"   "tibble"    "rvest"     "tidyr"    
-	%[19] "xml2"      "tidyverse"
-	{\bf Visualization}: & \texttt{base} and \texttt{ggplot2} graphics. \texttt{DiagrammeR} for graphs and flowcharts.\\ 
-	{\bf Reproducibility}: & \texttt{knitr} and \texttt{bookdown} to integrate text, code and results in reports.
-	%for reports with integrated
-	%immunoassays, drug-response assays, 
-	%Familiar with packages for Spatial data and Geographical information systems %layered grammar of graphics
-	%{\bf Frequently used}: & \texttt{knitr, Hmisc, XLConnect.}%\\
-\end{tabular}
+\section{\sc Scientific Publications}
+
+{\bf In preparation}
+
+\begin{list1}
+	%Antibody response against \textit{Plasmodium vivax} using protein microarray.
+	\item[-] Pinedo-Cancino V., Baldeviano GC., Durand S., Saavedra-Langer R., Ventocilla JA., Arista KM., Arana A., Chasnamonte M., \textbf{Valle-Campos A.}, Smith ES., Ru\'iz-Mesia L.  ``Assessing malaria transmission intensity in a low endemic area of the Peruvian Amazon using parasitological and serological surveys".%\\%, to be submitted to {\em American Journal of Tropical Medicine and Hygene (AJTMH)}, Dec 2017.%\\%: A preliminary study
+	\item[-] Saavedra-Langer R., Marapara J., \textbf{Valle-Campos A.}, Durand S., Chasnamote M., Silva H., Pinedo-Cancino V. ``IgG subclasses responses to excreted-secreted antigens of \textit{Plasmodium falciparum} in a low transmission malaria community of the Peruvian Amazon".%, to be submitted to {\em Acta Tropica}, Dec 2017.%\\%: A preliminary study
+\end{list1}
+
+\vspace*{-.1in}
+
+{\bf Poster presentation}
+
+\begin{list1}
+	\item[-] Quispe J., \textbf{Valle-Campos A.}, Ulloa G., Rodriguez L., Granados E., Cruz V., Valdivia M, et al.\\ ``In vitro effect of Extremely Low Frequency Magnetic Field on the sperm motility of Alpacas", \\ {\em Annual Meeting of the Bioelectromagnetics Society - BioEM2015. Monterey, USA}, July 2015.\\%: A preliminary study %Li{\~n}an A., Limaymanta O., Granados E., Fuentes P., Carhuaricra D., 
+	
+	%Punil R., Murillo A., Carrasco M., Huaman A., Quispe J., Miranda J., Valladares K. and \textbf{Valle A}. ``Dermatoglyphic analysis on individuals with Down syndrome and Autism in comparison to a control group", {\em XV National Congress of Biology Students - CONEBIOL 2014. Lima, Peru}, October 2014
+	
+	%Valdivia M., Tataje L., Cisneros S., Carmen R., Guillen W. de los Santos, Davila D., \textbf{Valle A.}, et.al. ``Important genes for the camelid reproduction", {\em International Meeting of Research Groups in Basic and Applied Sciences - ASCILA 2012. Lima, Peru}, May 2012\\
+\end{list1}
+
+\section{\sc Research participation}
+
+\begin{tabular}{ l c l }
+	Risk factors and spatial cluster analysis from epidemiological surveys.&2017- now&Data analyst\\
+	ELISA plates standardization for large-scale serological surveillance.&2016-2017&Data analyst\\
+	Differential expression and data mining from protein microarray data.&2015-2016&Data analyst\\
+	Dose-response assay of parasite growth against drug exposure (DELI).&2015-2016&Lab/Analyst\\
+	Magnetic field exposure system and biochemical sperm evaluation.&2013-2014&Laboratory\\
+	Gene cloning, protein expression, conventional and quantitative PCR.&2012-2013&Laboratory\\
+	Stem-cell isolation, cryopreservation. Oocyte-sperm interaction.&2012-2013&Laboratory\\ 
+	%  
+	% to assess growth response against drug exposure
+	%, DELI assay dose-response analysis of parasite growth against drug exposure
+\end{tabular}\\
+
+\section{\sc Financing obtained}
+
+\begin{tabular}{ l l l }
+	Mitochondrial activity after sperm capacitation in  Alpaca.&~~~~~~~2015&~~~~~S/1,500.00\\
+	{\em In vitro} effect of Magnetic Fields on the sperm motility of Alpacas.&~~~~~~~2014&~~~~~S/1,500.00\\
+%	Cryopreservation of Spermatogonial Stem Cells of Alpaca.&~~~~~~~2012&~~~~~S/1,500.00\\
+\end{tabular}\\
+
+%\section{\sc Data Science Skills}%Experienced in the Statistical computing software...
+%\begin{tabular}{ l l }
+%	{\bf Software}: &  R +packages:\\ %%some general-porpuse packages listed\\
+%	{\bf Biostatistics}: & \texttt{limma} to test differential expression in DNA/protein microarray data.\\ %of genes
+%	%\texttt{Hmisc} package %plus graphical summaries
+%	{\bf Modeling}: & \texttt{drc} to iteratively fit 4-parameter log-logistic models to immunoassays.\\
+%	{\bf Exploration}: & \texttt{tidyverse} for large dataset mining in genomics and epidemiology.\\% and \texttt{Hmisc}
+%	{\bf Visualization}: & \texttt{base} and \texttt{ggplot2} graphics. \texttt{DiagrammeR} for graphs and flowcharts.\\ 
+%	{\bf Reproducibility}: & \texttt{knitr} and \texttt{bookdown} to integrate text, code and results in reports.
+%	%for reports with integrated
+%	%immunoassays, drug-response assays, 
+%	%Familiar with packages for Spatial data and Geographical information systems %layered grammar of graphics
+%	%{\bf Frequently used}: & \texttt{knitr, Hmisc, XLConnect.}%\\
+%\end{tabular}
 
 \section{\sc Computational Skills}
 \begin{tabular}{ l l}
-	{\bf Programming Language}: & Python, Perl, Bash (Unix shell).\\
+	{\bf Programming Language}: & Python, Perl, Bash (Unix shell), SQL.\\
 	%Applications: Numerical integration and Population dynamics simulations.\\
+	{\bf Statistical package}: & R: \texttt{limma}, \texttt{drc}, \texttt{Hmisc}, \texttt{tidyverse}, \texttt{knitr}, \texttt{Diagrammer}.\\
+	{\bf Bioinformatics}: & Arlequin, MrBayes, Artemis, VMD, PyMol, Ape.\\
 	{\bf Operating System}: & GNU/Linux (Ubuntu distribution).\\ %%, Windows, OSX
 	{\bf Document preparation}: & \LaTeX, R Markdown.\\ %SublimeText.%
 	%using \texttt{knitr} package and Pandoc
@@ -219,29 +295,29 @@ Department of Parasitology - Division of Immunology and Vaccine Development\\
 	%{\bf Bioinformatics}: & Applications to phylogenetics, genome assembly, and structural genomics.%\\
 	%and genome assembly
 	%software: (Arlequin, DnaSP, PhyML, MrBayes, BEAST, MEGA), (MODELLER, GROMACS, VMD, PyMol), (Artemis)
-\end{tabular}
+\end{tabular}\\
 
-\section{\sc Bioinformatic Skills}
-\begin{tabular}{l l}
-	{\bf Phylogenetics}: & Arlequin, DnaSP, PhyML, MrBayes, BEAST, MEGA.\\
-	{\bf Structural genomics}: & MODELLER, GROMACS, VMD, PyMol.\\
-	{\bf Genomics}: & Artemis, ACT, samtools, cuffdiff.\\
-	{\bf Cloning}: & ApE.%\\
-\end{tabular}
+%\section{\sc Bioinformatic Skills}
+%\begin{tabular}{l l}
+%	{\bf Phylogenetics}: & Arlequin, DnaSP, PhyML, MrBayes, BEAST, MEGA.\\
+%	{\bf Structural genomics}: & MODELLER, GROMACS, VMD, PyMol.\\
+%	{\bf Genomics}: & Artemis, ACT, samtools, cuffdiff.\\
+%	{\bf Cloning}: & ApE.%\\
+%\end{tabular}
 
 
-\section{\sc Experimental Skills}
-%Experienced in 
-\begin{tabular}{ l l }
-	{\bf Genetics}: & Gene cloning, protein expression, conventional and quantitative PCR.\\
-	%genetic analysis techniques like %RealTime-
-	%Familiar with 
-	{\bf Biochemistry}: & Stem-cell isolation, cryopreservation, ELISA-based assays (e.g. DELI).\\ 
-	% Oocyte-sperm interaction 
-	% to assess growth response against drug exposure
-	%, DELI assay dose-response analysis of parasite growth against drug exposure
-	{\bf Optimization}: & Surface-response method with factorial design of experiments.\\
-\end{tabular}
+%\section{\sc Experimental Skills}
+%%Experienced in 
+%\begin{tabular}{ l l }
+%	{\bf Genetics}: & Gene cloning, protein expression, conventional and quantitative PCR.\\
+%	%genetic analysis techniques like %RealTime-
+%	%Familiar with 
+%	{\bf Biochemistry}: & Stem-cell isolation, cryopreservation, ELISA-based assays (e.g. DELI).\\ 
+%	% Oocyte-sperm interaction 
+%	% to assess growth response against drug exposure
+%	%, DELI assay dose-response analysis of parasite growth against drug exposure
+%	{\bf Optimization}: & Surface-response method with factorial design of experiments.\\
+%\end{tabular}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -254,13 +330,35 @@ Highest grade among 40 graduate and undergraduate students. %in this intensive s
 {\bf Ranked 1\textsuperscript{st} at the UNMSM Public University Admission Test} \hfill Mar 2011\\
 Highest score among the Basic Sciences Faculties from a total of 1000 applicants.\\%\vspace*{.05in}\\
 
+\section{\sc Teaching experience}
+%Invited teacher for the following third-year undergraduate elective courses: \\
+%{\bf Biomathematics}:  {\em Population dynamics}. \hfill {December 2015}\\ Discrete modeling methods in Ecology. \\ %%Graph theory and Linear algebra 
+{\bf Bioinformatics}: Data analysis of microarray based experiments. \hfill {2017-I}\\ Design, statistics and visualization using Bioconductor and Tidyverse in R. \\[4pt] 
+{\bf Biomathematics}: Gene Regulatory Networks. \hfill {2015/16/17-I/II}\\ GRN topology and dynamics using Graph Theory and Finite Automata. \\[4pt] %% Graph theory to model Topology and Automata Networks for Dynamics of GRN %% Modeling of Networks
+{\bf Horizontal Gene Transfer}: On \#tardigate and HGT bioinformatics. \hfill {2016-II}\\ 
+Review of the controversy around the first tardigrade genome. \\
+
+
+%\section{\sc Complementary activities}
+%{\bf IT training}: CISCO-IT Essentials: PC Hardware and Assembly. UNI. Lima-Peru. \hfill {Jan 2015} \\
+%%Universidad Nacional de Ingeniería 
+%{\bf Sports}: UNMSM swimming team 2011-2013. 1\textsuperscript{st} place: 50m Fly at the National Sport Games 2012\\
+
+
 %\section{\sc International training}
 \section{\sc Complementary education}
+
+{\bf CODATA-RDA School in Research Data Science}\hfill {Dec 2017}\\
+	\vspace*{-.1in}%Selected with complete financial support
+\begin{list2} %Job Description%
+	\item Two weeks on database management, machine learning and infrastructure.%\textit{Experience:}
+	\item ICTP-SAIFR. IFT-UNESP, S{\~a}o Paulo - Brazil. %International Center for Theoretical Physics - South American Institute for Fundamental Research (ICTP-SAIFR). IFT-UNESP, Sao Paulo- Brazil.%\textit{Organized by:} 
+\end{list2}
 
 {\bf Wellcome Genome Campus Advanced Courses:\\Working with Parasite Data Resources}\hfill {Oct 2016}\\
 	\vspace*{-.1in}%Complete financial support
 \begin{list2} %Job Description%
-	\item One week on genomics, proteomics, metabolomics applications of \texttt{eupathdb.org}.
+	\item One week on genomic, proteomic, metabolomic applications of \texttt{eupathdb.org}.
 %	\item \textit{Venue:} Instituto del Higiene, Montevideo, Uruguay.%\\
 	\item Wellcome Trust Sanger Institute, UK. Montevideo - Uruguay.%\\ %with EuPathDB and 
 	%Resource Center the Eukaryotic Pathogen Bioinformatics Resource Center 
@@ -276,12 +374,12 @@ Highest score among the Basic Sciences Faculties from a total of 1000 applicants
 	%\item \textit{Time:} 30h
 \end{list2}
 
-{\bf School on Physics Applications in Biology}\hfill {Jan 2016}\\
-	\vspace*{-.1in}%Selected with complete financial support
-\begin{list2} %Job Description%
-	\item Three weeks on game theory, non-linear dynamics and statistical physics.%\textit{Experience:}
-	\item ICTP-SAIFR. IFT-UNESP, S{\~a}o Paulo - Brazil. %International Center for Theoretical Physics - South American Institute for Fundamental Research (ICTP-SAIFR). IFT-UNESP, Sao Paulo- Brazil.%\textit{Organized by:} 
-\end{list2}
+%{\bf School on Physics Applications in Biology}\hfill {Jan 2016}\\
+%	\vspace*{-.1in}%Selected with complete financial support
+%\begin{list2} %Job Description%
+%	\item Three weeks on game theory, non-linear dynamics and statistical physics.%\textit{Experience:}
+%	\item ICTP-SAIFR. IFT-UNESP, S{\~a}o Paulo - Brazil. %International Center for Theoretical Physics - South American Institute for Fundamental Research (ICTP-SAIFR). IFT-UNESP, Sao Paulo- Brazil.%\textit{Organized by:} 
+%\end{list2}
 
 {\bf V Southern-Summer School on Mathematical Biology}\hfill {Jan 2016}\\
 	\vspace*{-.1in}%Complete financial support
@@ -342,46 +440,28 @@ Highest score among the Basic Sciences Faculties from a total of 1000 applicants
 %	%\textit{Time:} 60h
 %\end{list2}
 
-\section{\sc Teaching experience}
-%Invited teacher for the following third-year undergraduate elective courses: \\
-%{\bf Biomathematics}:  {\em Population dynamics}. \hfill {December 2015}\\ Discrete modeling methods in Ecology. \\ %%Graph theory and Linear algebra 
-{\bf Biomathematics}: Gene Regulatory Networks. \hfill {2015/16-II, 2017-I}\\ GRN topology and dynamics using Graph Theory and Finite Automata. \\[4pt] %% Graph theory to model Topology and Automata Networks for Dynamics of GRN %% Modeling of Networks
-{\bf Horizontal Gene Transfer}: On \#tardigate and HGT bioinformatics. \hfill {2016-II}\\ 
-Review of the controversy around the first tardigrade genome. \\
-
-
-%\section{\sc Poster presentation}
-
-%Quispe J., \textbf{Valle-Campos A.}, Ulloa G., Rodriguez L., Granados E., Cruz V., Valdivia M, et al.\\ ``In vitro effect of Extremely Low Frequency Magnetic Field on the sperm motility of Alpacas", \\ {\em Annual Meeting of the Bioelectromagnetics Society - BioEM2015. Monterey, USA}, July 2015.\\%: A preliminary study
-%Li{\~n}an A., Limaymanta O., Granados E., Fuentes P., Carhuaricra D., 
-
-%Punil R., Murillo A., Carrasco M., Huaman A., Quispe J., Miranda J., Valladares K. and \textbf{Valle A}. ``Dermatoglyphic analysis on individuals with Down syndrome and Autism in comparison to a control group", {\em XV National Congress of Biology Students - CONEBIOL 2014. Lima, Peru}, October 2014
-
-%Valdivia M., Tataje L., Cisneros S., Carmen R., Guillen W. de los Santos, Davila D., \textbf{Valle A.}, et.al. ``Important genes for the camelid reproduction", {\em International Meeting of Research Groups in Basic and Applied Sciences - ASCILA 2012. Lima, Peru}, May 2012\\
-
-
 \section{\sc Languages}
-{\bf English}: Advance Level complete. BRITANICO Institute. Lima-Peru. \hfill {2012-2014} \\%Set Feb 
-
-%\section{\sc Complementary activities}
-%{\bf IT training}: CISCO-IT Essentials: PC Hardware and Assembly. UNI. Lima-Peru. \hfill {Jan 2015} \\
-%%Universidad Nacional de Ingeniería 
-%{\bf Sports}: UNMSM swimming team 2011-2013. 1\textsuperscript{st} place: 50m Fly at the National Sport Games 2012\\
+{\bf English}: Advance level in Reading, Speaking and Writing.\\
+{\bf Spanish}: Advance level in Reading, Speaking and Writing. Mother tongue.\\
+%{\bf English}: Advance Level complete. BRITANICO Institute. Lima-Peru. \hfill {2012-2014} \\%Set Feb 
 
 \section{\sc References }
 
 \begin{tabular}{ l l }
 	G. Christian Baldeviano, PhD & Head, Immunology and Vaccine Development Unit \\
 	Advisor & Naval Medical Research Unit Six (NAMRU-6)\\
-	Jan 2014 - present & geralc.baldeviano.fn@mail.mil\\
+	2014 - 2017 & gbaldevi@gmail.com\\
 	&\\
-	Andres G. Lescano, MSH, PhD & Professor and Coordinator, Masters' in Epidemiological Research\\
-	Advisor & Universidad Peruana Cayetano Heredia (UPCH)\\
-	Jan 2014 - Jun 2015 & andres.lescano.g@upch.pe\\
+	Viviana Pinedo Cancino, PhD, MSc & Research scientist and General Coordinator\\
+	Supervisor & Universidad Nacional de la Amazon\'ia Peruana (UNAP)\\
+	2016 - 2017 & vivi\_vane@hotmail.com\\
+	%Andres G. Lescano, MSH, PhD & Professor and Coordinator, Masters' in Epidemiological Research\\
+	%Advisor & Universidad Peruana Cayetano Heredia (UPCH)\\
+	%Jan 2014 - Jun 2015 & andres.lescano.g@upch.pe\\
 	&\\
 	Prof. Walter Cabrera-Febola & Chief, Group of Natural Structures and Theoretical Research \\
 	Teacher & Universidad Nacional Mayor de San Marcos (UNMSM)\\
-	Mar 2013 - Dec 2015 & febcawal@gmail.com\\	
+	2013 - 2015 & febcawal@gmail.com\\	
 \end{tabular}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
