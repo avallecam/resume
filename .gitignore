@@ -12,3 +12,6 @@ template/*
 release-pdf/*
 sample-pdf/*
 figure/*
+cv-release-pdf/*
+cv-sample-pdf/*
+*/*.out

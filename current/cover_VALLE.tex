@@ -2,8 +2,16 @@
 \documentclass{letter} 					% Uses 10pt
 % Use \documentstyle[newcent]{letter} for New Century Schoolbook postscript font
 
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=balck,      
+	urlcolor=black,
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% ADD-IN to activate spanish text (tildes)
+%% ADD-IN to activate spanish text (tildes) [UTIL PARA FECHAS]
 %\usepackage[spanish]{babel}
 %\selectlanguage{spanish}
 %\usepackage[utf8]{inputenc}
@@ -12,22 +20,23 @@
 
 % the following commands control the margins:
 \topmargin=-1in    						% Make letterhead start about 1 inch from top of page 
-\textheight=10in  						% text height can be bigger for a longer letter
+\textheight=8.5in  						% text height can be bigger for a longer letter
 \oddsidemargin=0pt 						% leftmargin is 1 inch
 \textwidth=6.5in   						% textwidth of 6.5in leaves 1 inch for right margin
 
 \begin{document}
 
-\signature{Andree Valle Campos}         % name for signature 
+\signature{Andree Valle Campos, MSc(c).}         % name for signature 
 \longindentation=0pt                    % needed to get closing flush left
 \let\raggedleft\raggedright             % needed to get date flush left
  
  
 \begin{letter}{
-		International Potato Center (CIP)\\
-		Avenida La Molina 1895, La Molina\\
-		Apartado Postal 1558\\
-		Lima, Peru
+		
+		Malaria: Parasites \& Hosts Unit\\
+%		Facultad de Salud P\'ublica y Administraci\'on\\
+		Intitut Pasteur\\
+		Paris, France
 %		Ms. Terri Roberts \\
 %		Senior Staff Recruiter \\
 %		XYZ Corporation \\
@@ -37,12 +46,14 @@
 
 
 \begin{flushleft}
-{\large\bf Andree Valle Campos}
+{\large\bf Andree Valle Campos, MSc(c).}
 \end{flushleft}
-\medskip\hrule height 1pt
+%\medskip
+\hrule height 1pt
 \begin{flushright}
-\hfill Calle Tambo Huascar 201, San Miguel, Lima - Peru \\
-\hfill avallecam@gmail.com, @avallecam, (+51)950951722
+%\hfill @avallecam, avallecam@gmail.com, (+51)~950~951~722 \\
+\hfill \href{https://gist.github.com/avallecam}{\includegraphics[scale=.005]{../figure/gh_logo.png}} \href{https://stackoverflow.com/users/6702544/avallecam}{\includegraphics[scale=.035]{../figure/so_logo.png}} \href{https://twitter.com/avallecam}{\includegraphics[scale=.015]{../figure/tw_logo.jpg} @avallecam} ~ \includegraphics[scale=.02]{../figure/gm_logo.png} avallecam@gmail.com ~  \includegraphics[scale=.015]{../figure/wa_logo.jpg} (+51)~950~951~722\\
+\hfill Calle Tambo Hu\'ascar 201, San Miguel. Lima - Per\'u
 \end{flushright} 
 \vfill % forces letterhead to top of page
 
@@ -122,22 +133,44 @@
 
  
 \opening{To whom it may concern :} 
-%\opening{To whom it may concern:} 
+%\opening{A quien corresponda:} 
  
-\noindent 
+%\noindent 
 %My name is Andree Valle Campos and 
 %I am a BSc in Genetics and Biotechnology with 3 years of experience on computational research. 
 %after receiving this degree. %of independent
 %\noindent 
-I write to you in order to express my interest in the application for the Master student - Consultant position,
-which I learned from a Job Alert of the International Potato Center (CIP) LinkedIn account.
+%Le escribo con el objetivo de expresar mi interés en la aplicación a la Beca EMERGE para la Maestría en Ciencias en Investigación Epidemiológica que ustedes ofrecen, la cual tuve conocimiento por redes sociales.
+
+\noindent
+I write to you in order to express my interest in the application for the internship that The Malaria: Parasites \& Hosts Unit at Institut Pasteur is offering, which I learned from your twitter account (\href{https://twitter.com/michaelwhite\_36/status/1177487514174537728?s=03}{link}).
 
 \noindent 
-I introduce myself as a biologist skilled in Data Science with 3 years of experience on bioinformatic research.
+I introduce myself as a researcher skilled in data science with a 4 year experience in biostatistics, bioinformatic and epidemiological research on Malaria.
+As a masters candidate in epidemiological research, my thesis is on asymptomatic malaria and human movement behavior. Even though, as you can gather from my CV, my previous research was focused on the discovery of malaria immunogenic antigens through protein microarrays and the estimation of disease transmission through serological surveys.
+
+\noindent 
+It is due to this last research topic that I had reference on your work. In that research project I was in charge of mostly all the data analysis workflow: standardization of ELISA plates, estimation of arbitrary antibody titers using log-logistic regression models, classification of distributions by gaussian mixture models and estimation of seroconvertion rates with reversible serocatalitic models. All of this experience ended defining myself as an applied quantitative researcher and a publication at the Malaria Journal.
+
+\noindent 
+With this internship opportunity, I would like to re-open this research branch and get deep in serological surveys, adding a stronger modelling perspective on the evaluation of health interventions. Even more, this would be a strong step in my career that would improve my possibilities to be accepted in competitive international PhD programs. In there I would like to explore the usage of new technologies as remote lab-on-a-chip sensors to make surveillance cheaper in human workforce, more informative on molecular targets, and faster in data acquisition to tell decision makers.
+
+\noindent
+I would be very grateful to request an interview and talk in more detail on the issue. My schedule is flexible enough to set a meeting at any hour according to your availability. Thanks for your time to consider my credentials.
+
+\closing{Sincerely yours,} 
+
+\encl{Curriculum Vitae (cv-20190930-valle\_campos\_andree.pdf)}  				% Enclosures
+
+
+%As you can gather from my CV, during the last two years I self-learned and trained in R and two of its major environments: \textit{Bioconductor} and the \textit{Tidyverse}, in order to implement workflows for genome-scale experiments and integrate them with raw epidemiological datasets. Furthermore, \textit{Rmarkdown notebooks} allowed me to generate scientific reports that improved the quality and traceability of my procedures.
+
+%Me presento como un biólogo hábil en el análisis de datos con tres años de experiencia en la investigación bioinformática.
+%I introduce myself as a biologist skilled in Data Science with 3 years of experience on bioinformatic research.
 %I introduce myself as a quantitative-oriented biologist with 3 years of experience on computational research. 
-My interest in the position came from both: the host-pathogen interactomic approach through the potato virome, and the possibility to optimize this procedure by the implementation of a surveillance-like automated pipeline to process, analyze and visualize molecular data using free software.
-My experience as an omics-data pipeline developer came from my work in the interface between epidemiology and immunology.
-As you can gather from my CV, during the last two years I self-learned and acquired fluency in R and two of its major environments: \textit{Bioconductor} and the \textit{Tidyverse}, in order to implement workflows for genome-scale experiments and integrate them with raw epidemiological datasets. Furthermore, \textit{Rmarkdown notebooks} allowed me to generate scientific reports that improved the quality and traceability of my procedures.
+%My interest in the position came from both: the host-pathogen interactomic approach through the potato virome, and the possibility to optimize this procedure by the implementation of a surveillance-like automated pipeline to process, analyze and visualize molecular data using free software.
+%My experience as an omics-data pipeline developer came from my work in the interface between epidemiology and immunology.
+
 %As you can read from my CV, I have a strong experience in the fields of Genomics Data Science and Bioinformatics. 
 %While working in the interphase between Epidemiology and large-scale Immunology, I implemented reproducible data analysis workflows and, as a result, gained fluency in R, several programming languages and other computational tools that optimized my daily research.Furthermore, formal learning in fields like phylogenetics and structural genomics, gave mea in-depth understanding and critical perspective in the required field.
 %I was immersed in the problematic around immunoassay non-reproducible data analysis methods. 
@@ -152,29 +185,22 @@ As you can gather from my CV, during the last two years I self-learned and acqui
 %from intracellular to extracellular responses, and estimate their variability in a more controlled fashion. 
 %I thought that the CZ BioHub may have the great environment to further study this hypothesis.
 
-\noindent
-With respect to the specific requirements, I have also received formal training in the traditional toolbox to analyze Genomics data from both my undergraduate studies and complementary international courses. For instance, at the Wellcome Trust advanced course I improved my knowledge on the application and interpretation of terminal-based and Galaxy server workflows for RNA-seq data.
-Secondly, although computationally biased, I have also accomplished molecular laboratory competences through hands-on courses with an outstanding participation in the summer of 2013, gaining an invitation to a complementary workshop in November as a prize.%analytic techniques?
-Finally, even though I am not in a Master Degree Program yet, I am willing to move on and start one the next year, looking with interest either lab-based programs as the Biochemistry and Molecular Biology Master given by the Universidad Peruana Cayetano Heredia (UPCH) or computationally-based as the Data Science Master of the Ricardo Palma University (URP). Starting the project in advance would give me the chance to focus extra-time on key research aspects like literature review, project design and methods, including the Statistical Analysis Plan.
+%\noindent
+%With respect to the specific requirements, I have also received formal training in the traditional toolbox to analyze Genomics data from both my undergraduate studies and complementary international courses. For instance, at the Wellcome Trust advanced course I improved my knowledge on the application and interpretation of terminal-based and Galaxy server workflows for RNA-seq data.
+%Secondly, although computationally biased, I have also accomplished molecular laboratory competences through hands-on courses with an outstanding participation in the summer of 2013, gaining an invitation to a complementary workshop in November as a prize.%analytic techniques?
+%Finally, even though I am not in a Master Degree Program yet, I am willing to move on and start one the next year, looking with interest either lab-based programs as the Biochemistry and Molecular Biology Master given by the Universidad Peruana Cayetano Heredia (UPCH) or computationally-based as the Data Science Master of the Ricardo Palma University (URP). Starting the project in advance would give me the chance to focus extra-time on key research aspects like literature review, project design and methods, including the Statistical Analysis Plan.
 
 %\noindent 
 %As you can also gather from my CV, I have participated in schools and courses in different countries, all involving interdisciplinary work and hands-on training with internationally recognized researchers. 
 %From these experiences I expanded my scientific horizons, improved my communication abilities and openness to other cultures. 
 %I also gave University classes for three years, sharing some of my learnings and encouraging new people into theoretical and computational biology.
 
-\noindent 
-As an active self-learner and enthusiast for group-oriented research, I am extremely sure that a challenging environment as the CIP would improve my gained background.
+%\noindent 
+%As an active self-learner and enthusiast for group-oriented research, I am extremely sure that a challenging environment as the CIP would improve my gained background.
 %I believe that my presence in your institution would be a great benefit to everyone. 
-Even more, this would be a strong step in my career that would improve my possibilities to be accepted in competitive international PhD programs.
+%Even more, this would be a strong step in my career that would improve my possibilities to be accepted in competitive international PhD programs.
 %I am enthusiastic about the possibility of working together and I hope to hear from you very soon.
  
-\noindent
-I would be very grateful to request an interview and talk in more detail on the issue. My schedule is flexible enough to set a meeting at any hour according to your availability. Thanks for your time to consider my credentials.
- 
-\closing{Sincerely yours,} 
-  
-\encl{Curriculum Vitae (CV\_ValleCampos-Andree.pdf)}  				% Enclosures
-
 %***
 %
 %aGRAND LOCUS Notes:

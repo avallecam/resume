@@ -2,13 +2,45 @@
 %\usepackage{fontawesome} %https://tex.stackexchange.com/questions/190927/linkedin-logo-in-latex
 \usepackage{graphicx}
 \renewcommand{\namefont}{\bfseries\LARGE}
+\usepackage{hyperref}
+\usepackage{tikz}
+\newcommand{\ExternalLink}{%
+	\tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+		\begin{scope}[x=1ex, y=1ex]
+			\clip (-0.1,-0.1) 
+			--++ (-0, 1.2) 
+			--++ (0.6, 0) 
+			--++ (0, -0.6) 
+			--++ (0.6, 0) 
+			--++ (0, -1);
+			\path[draw, 
+			line width = 0.5, 
+			rounded corners=0.5] 
+			(0,0) rectangle (1,1);
+		\end{scope}
+		\path[draw, line width = 0.5] (0.5, 0.5) 
+		-- (1, 1);
+		\path[draw, line width = 0.5] (0.6, 1) 
+		-- (1, 1) -- (1, 0.6);
+	}
+}
+
+\usepackage{xcolor}
+\definecolor{custom-blue}{RGB}{6,69,173} % Gives your custom colour a name
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=custom-blue,
+	filecolor=custom-blue,      
+	urlcolor=custom-blue,
+}
 
 \oddsidemargin -.5in
 \evensidemargin -.5in
-\textwidth=6.0in
+\textwidth=6.1in
 \itemsep=0in
 \parsep=0in
-\topmargin=0in
+\topmargin=-.2in
 \topskip=0in
 \textheight 10in
  
@@ -27,21 +59,25 @@
     
 \begin{document}
 %\newlength{\maxmarg}
-\name{\LARGE Andree Valle Campos}
-\address{\includegraphics[scale=.62]{../figure/g_logo.png} \includegraphics[scale=.38]{../figure/s_logo.png} \includegraphics[scale=.16]{../figure/t_logo.png} @avallecam ~ \includegraphics[scale=.6]{../figure/m_logo.png} avallecam@gmail.com ~  \includegraphics[scale=.45]{../figure/w_logo.jpg} (+51)~950~951~722}
+\name{\Large Andree Valle Campos, MSc(c)} %Pron: Él/He/His
+\address{Pron: Él/He/His ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	\href{https://gist.github.com/avallecam}{\includegraphics[scale=.005]{../figure/gh_logo.png}} \href{https://stackoverflow.com/users/6702544/avallecam}{\includegraphics[scale=.035]{../figure/so_logo.png}} \href{https://twitter.com/avallecam}{\includegraphics[scale=.015]{../figure/tw_logo.jpg} @avallecam} ~ \includegraphics[scale=.02]{../figure/gm_logo.png} avallecam@gmail.com ~  \includegraphics[scale=.015]{../figure/wa_logo.jpg} (+51)~950~951~722}
 \address{%\hspace{20\maxmarg}
-	~~~~~~~~~~~~~~~~~~~~~~~Calle Tambo Huascar 201, San Miguel. Lima - Peru}
-%\address{\textit{twitter:} @avallecam}
-%\includegraphics[scale=.42]{../figure/g_logo_2.png}
+		\href{https://orcid.org/0000-0002-7779-481X}{ \includegraphics[scale=.08]{../figure/ORCIDiD_icon128x128.png} https://orcid.org/0000-0002-7779-481X }
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Calle Tambo Huascar 201, San Miguel. Lima - Peru}
 
 \begin{resume}
 
 \vspace*{.15in}
 
-\section{\sc Research Interests}% %
+\section{\sc Interest}% %
 
-Data science approaches to analysis and visualization in Genomics, Inmunology and Epidemiology.\\
-Quantitative biology, Reproducible science, Free software solutions, and Open science projects.\\
+Systems Biology. Biostatistics as toolkit. Data Science education. Healthy work environments.\\ %tabular data
+%Bioinformatics, Biostatistics
+%Molecular and sero- epidemiology of vector-borne diseases: spatial distribution and climatic factors.\\
+%Data science approaches to analysis and visualization in Genomics, Inmunology and Epidemiology.\\
+%Quantitative biology, Reproducible science, Free software solutions, and Open science projects.\\
 %Data science approaches to high-dimensional analysis in Genomics, Inmunology and Epidemiology.\\
 %Get a position in the field of Bioinformatics with emphasis in high-dimensional omics data analysis.\\
 %Get a position in the field of Data Science with emphasis in public database analysis workflows.\\
@@ -83,9 +119,13 @@ Quantitative biology, Reproducible science, Free software solutions, and Open sc
 \section{\sc Education}
 
 \begin{tabular}{ l l }
-	2011-2015 & Universidad Nacional Mayor de San Marcos (UNMSM), Lima-Peru\\
-	& {\bf BSc. Genetics and Biotechnology}\\
-\end{tabular}\\
+	2018-2018 & {\bf Master of Science in Epidemiological Research}\\ %(10 months, 24h/week)
+	& Universidad Peruana Cayetano Heredia (UPCH), Lima-Peru\\
+	& Rank: Top fifth among 28 students.\\ %4\textsuperscript{th}/28.\\ %Average: 15.90/20.  %Top 15\%. \\ %Rank: 4\textsuperscript{th} among 28 students. Upper fifth.\\& Ranking: 4\textsuperscript{to} de 28 alumnos. Quinto superior.\\
+	2011-2015 & {\bf Bachelor of Science in Genetics and Biotechnology}\\
+	& Universidad Nacional Mayor de San Marcos (UNMSM), Lima-Peru\\
+	& Rank: Top third at the 4th term among 30 students.\\%15\textsuperscript{th}/30. (Upper third at the 4th term).\\ %Average: 13.85/20. 
+\end{tabular}
 
 %Universidad Nacional Mayor de San Marcos (UNMSM), Lima-Peru \hfill 2011-2015\\%Mar Dec 
 %%\vspace*{-.1in}
@@ -112,18 +152,22 @@ Quantitative biology, Reproducible science, Free software solutions, and Open sc
 %\end{center}
 
 
-\section{\sc Work History and affiliations}
+\section{\sc Affiliations}
 
 \begin{tabular}{ l l l }
-	2017- now & Universidad Peruana Cayetano Heredia (UPCH), Peru.&\\
-	& Emergent Diseases and Climate Change Research Unit (EMERGE).&{\bf Internship}\\
-	2016-2017 & Universidad Nacional de la Amazon\'ia Peruana (UNAP), Peru.&\\
-	& Fundaci\'on para el Desarrollo Sostenible de la Amazon\'ia Baja.&{\bf Consultant}\\
-	2015-2016 & U.S. Naval Medical Research Unit Six (NAMRU-6), Peru.&\\
-	& Dept. of Parasitology, Div. of Immunology and Vaccine Development.&{\bf Thesis stud.}\\
+	2019- act. & \textbf{Center for Epidemiology and Disease Control (CDC Peru)}&{\bf Researcher}\\
+	%Centro Nacional de Epidemiolog\'ia, Prevenci\'on y Control de Enfermedades
+	& Epidemiological Research and Intervention Evaluation Group.&\\
+	%&Ministery of Health&\\
+	2017-2019 & \textbf{Universidad Peruana Cayetano Heredia (UPCH)}, Peru.&{\bf Intern}\\
+	& Emerge, Emergent Diseases and Climate Change Research Unit.&\\
+	2016-2017 & \textbf{Universidad Nacional de la Amazon\'ia Peruana (UNAP)}, Peru.&{\bf Consultant}\\
+	& Fundaci\'on para el Desarrollo Sostenible de la Amazon\'ia Baja.&\\
+	2015-2016 & \textbf{U.S. Naval Medical Research Unit Six (NAMRU-6)}, Peru.&{\bf Intern}\\
+	& Dept. of Parasitology, Div. of Immunology and Vaccine Development.&\\
 	%2014-2015 & &{\bf Trainee}\\
-	2012-2015 & Universidad Nacional Mayor de San Marcos (UNMSM), Peru.&\\
-	&Laboratory of Physiology and Animal Reproduction (LFRA).&{\bf Researcher}\\
+	%2012-2015 & \textbf{Universidad Nacional Mayor de San Marcos (UNMSM)}, Peru.&{\bf Intern}\\
+	%&Laboratory of Physiology and Animal Reproduction (LFRA).&\\
 \end{tabular}\\
 
 %Universidad Peruana Cayetano Heredia (UPCH), Peru.\\
@@ -217,49 +261,91 @@ Quantitative biology, Reproducible science, Free software solutions, and Open sc
 %	\end{list2}
 %\end{list1}
 
-\section{\sc Scientific Publications}
+\section{\sc Publications (n=7)}
 
-{\bf In preparation}
+{\bf Peer-reviewed (n=5)}\\
+-Gunderson AK, Kumar RE, Recalde-Coronel C, Vasco LE, \underline{\smash{Valle-Campos A}}, et al. ``{Malaria Transmission and Spillover across the Peru–Ecuador Border: A Spatiotemporal Analysis}". \textit{Int. J. Environ. Res. Public Health 2020, 17, 7434.} \href{https://doi.org/10.3390/ijerph17207434}{doi: 10.3390/ijerph17207434 \ExternalLink}.\\
+-Quispe AM, Pinto DF, Huamán MR, Bueno GM, \& \underline{\smash{Valle-Campos A}}. [``Quantiative Methodologies: Sample size calculation with STATA and R."] \textit{Revista del Cuerpo Médico del HNAAA, 2020, 13(1), 78-83}. \href{https://doi.org/10.35434/rcmhnaaa.2020.131.627}{doi: 10.35434/rcmhnaaa.2020.131.627 \ExternalLink}.\\
+-Munayco CV, Tariq A, Rothenberg R, Soto-Cabezas MG, Reyes MF, \underline{\smash{Valle A.}}, et al. ``{Early transmission dynamics of COVID-19 in a southern hemisphere setting: Lima-Peru: February 29th--March 30th, 2020.}". \textit{Infectious Disease Modelling, 2020, 5, 338 - 345}. \href{https://doi.org/10.1016/j.idm.2020.05.001}{doi: 10.1016/j.idm.2020.05.001 \ExternalLink}.\\
+-Loyola S., \underline{\smash{Valle A.}}, Montero S. and Carrasco-Escobar G. [``Recomendations to properly describe a COVID-19 epidemic curve."] \textit{{Revista Peruana de Medicina Experimental y Salud P{\'u}blica}, 2020, 37(2)}. \href{https://doi.org/10.17843/rpmesp.2020.372.5461}{doi: 10.17843/rpmesp.2020.372.5461 \ExternalLink}.\\
+-Saavedra-Langer R., Marapara J., \underline{\smash{Valle-Campos A.}}, et al. ``IgG subclass responses to excreted-secreted antigens of \textit{Plasmodium falciparum} in a low transmission malaria community of the Peruvian Amazon". \textit{Malaria journal, 2018, 17(1), 328}. \href{https://doi.org/10.1186/s12936-018-2471-6}{doi: 10.1186/s12936-018-2471-6 \ExternalLink}.\\[4pt]
+{\bf At Newsletters (n=2)}\\
+-[Opinion] Carrasco-Escobar G, Incio J, \underline{\smash{Valle A.}}, Mart{\'i}nez JJ, Prochazka M, Ugarte C. [``Data and Transparency to fight against to coronavirus."] \textit{Ojo P{\'u}blico, 2020}. \href{https://ojo-publico.com/1718/datos-y-transparencia-para-luchar-contra-el-coronavirus}{url: ojo-publico.com \ExternalLink }.\\
+-[Editorial] \underline{\smash{Valle-Campos A.}} [``Health Data Science: Applications at the Peruvian Center for Epidemiology, Prevention and Disease Control, CDC-Peru."] \textit{Boletín Epidemiológico del Perú, 2019, 18(49), 1245}. \href{https://avallecam.github.io/health_data_science_editorial/}{doi: 10.5281/zenodo.4014211 \ExternalLink}.
 
-\begin{list1}
-	%Antibody response against \textit{Plasmodium vivax} using protein microarray.
-	\item[-] Pinedo-Cancino V., Baldeviano GC., Durand S., Saavedra-Langer R., Ventocilla JA., Arista KM., Arana A., Chasnamonte M., \textbf{Valle-Campos A.}, Smith ES., Ru\'iz-Mesia L.  ``Assessing malaria transmission intensity in a low endemic area of the Peruvian Amazon using parasitological and serological surveys".%\\%, to be submitted to {\em American Journal of Tropical Medicine and Hygene (AJTMH)}, Dec 2017.%\\%: A preliminary study
-	\item[-] Saavedra-Langer R., Marapara J., \textbf{Valle-Campos A.}, Durand S., Chasnamote M., Silva H., Pinedo-Cancino V. ``IgG subclasses responses to excreted-secreted antigens of \textit{Plasmodium falciparum} in a low transmission malaria community of the Peruvian Amazon".%, to be submitted to {\em Acta Tropica}, Dec 2017.%\\%: A preliminary study
-\end{list1}
+% \vspace*{-.1in}
+% 
+% {\bf In process}\\
+% - Munayco CV, Soto-Cabezas MG, Reyes MF, \underline{\smash{Valle-Campos A}}, et al. ``Epidemiological analysis of the Guillain Barré syndrome epidemics in Peru, 2019".\\
+% - Magui{\~n}a JL, \underline{\smash{Valle-Campos A}}, Lescano AG, Bennett A, et al. ``Human population movement and asymptomatic malaria using GPS tracking units".\\
+% - \underline{\smash{Valle-Campos A}}, Pinedo-Cancino V, Baldeviano GC, Lescano AG, et al. ``Multidimensional risk to \textit{Plasmodium vivax} malaria in a periurban community of the Peruvian Amazon Basin".\\
+% - Pinedo-Cancino V, Baldeviano GC, \underline{\smash{Valle-Campos A}}, Lescano AG, et al. ``Malaria transmission intensity in a periurban low endemic area of the Peruvian Amazon: A serological survey".\\%\\%, to be submitted to {\em American Journal of Tropical Medicine and Hygene (AJTMH)}, Dec 2017.%\\%: A preliminary study %Lescano AG., %Pinedo-Cancino V., Baldeviano GC., Durand S., Saavedra-Langer R., Ventocilla JA., Arista KM., Arana A., Chasnamonte M., \textbf{\underline{\smash{Valle-Campos A.}}}, Smith ES., Ru\'iz-Mesia L., et al
+% - \underline{\smash{Valle-Campos A}}, Baldeviano GC, Smith ES, Lescano AG, et al. ``Large-scale antibody profiling of severe vivax malaria using protein microarrays".\\
 
-\vspace*{-.1in}
+%\begin{list1}
+%Antibody response against \textit{Plasmodium vivax} using protein microarray.
+%\item[-] Pinedo-Cancino V., Baldeviano GC., Durand S., Saavedra-Langer R., Ventocilla JA., Arista KM., Arana A., Chasnamonte M., \textbf{\underline{\smash{Valle-Campos A.}}}, Smith ES., Ru\'iz-Mesia L., et al.  ``Assessing malaria transmission intensity in a low endemic area of the Perúvian Amazon using parasitological and serological surveys".%\\%, to be submitted to {\em American Journal of Tropical Medicine and Hygene (AJTMH)}, Dec 2017.%\\%: A preliminary study %Lescano AG.,
+%\item[-] 
+%		\end{list1}
 
-{\bf Poster presentation}
+%\vspace*{-.1in}
+%{\bf Conference poster}\\
+%Quispe J, \underline{\smash{Valle-Campos A}}, Valdivia M, et al. ``In vitro effect of Extremely Low Frequency Magnetic Field on the sperm motility of Alpacas", {\em Annual Meeting of the Bioelectromagnetics Society - BioEM2015. Monterey, USA}, July 2015. Abstract at: \href{http://www.bioem2015.org/Program.pdf}{http://www.bioem2015.org/Program.pdf}.\\%: A preliminary study %Li{\~n}an A., Limaymanta O., Granados E., Fuentes P., Carhuaricra D., 
 
-\begin{list1}
-	\item[-] Quispe J., \textbf{Valle-Campos A.}, Ulloa G., Rodriguez L., Granados E., Cruz V., Valdivia M, et al.\\ ``In vitro effect of Extremely Low Frequency Magnetic Field on the sperm motility of Alpacas", \\ {\em Annual Meeting of the Bioelectromagnetics Society - BioEM2015. Monterey, USA}, July 2015.\\%: A preliminary study %Li{\~n}an A., Limaymanta O., Granados E., Fuentes P., Carhuaricra D., 
 	
 	%Punil R., Murillo A., Carrasco M., Huaman A., Quispe J., Miranda J., Valladares K. and \textbf{Valle A}. ``Dermatoglyphic analysis on individuals with Down syndrome and Autism in comparison to a control group", {\em XV National Congress of Biology Students - CONEBIOL 2014. Lima, Peru}, October 2014
 	
 	%Valdivia M., Tataje L., Cisneros S., Carmen R., Guillen W. de los Santos, Davila D., \textbf{Valle A.}, et.al. ``Important genes for the camelid reproduction", {\em International Meeting of Research Groups in Basic and Applied Sciences - ASCILA 2012. Lima, Peru}, May 2012\\
-\end{list1}
+%\end{list1}
 
-\section{\sc Research participation}
+%\section{\sc Research participation}
 
-\begin{tabular}{ l c l }
-	Risk factors and spatial cluster analysis from epidemiological surveys.&2017- now&Data analyst\\
-	ELISA plates standardization for large-scale serological surveillance.&2016-2017&Data analyst\\
-	Differential expression and data mining from protein microarray data.&2015-2016&Data analyst\\
-	Dose-response assay of parasite growth against drug exposure (DELI).&2015-2016&Lab/Analyst\\
-	Magnetic field exposure system and biochemical sperm evaluation.&2013-2014&Laboratory\\
-	Gene cloning, protein expression, conventional and quantitative PCR.&2012-2013&Laboratory\\
-	Stem-cell isolation, cryopreservation. Oocyte-sperm interaction.&2012-2013&Laboratory\\ 
-	%  
-	% to assess growth response against drug exposure
-	%, DELI assay dose-response analysis of parasite growth against drug exposure
-\end{tabular}\\
+%\begin{tabular}{ l c l }
+%	Risk factors and spatial cluster analysis from epidemiological surveys.&2017- now&Data analyst\\
+%	%ELISA plates standardization for large-scale serological surveillance.&2016-2017&Data analyst\\
+%	Differential expression and data mining from protein microarray data.&2015-2016&Data analyst\\
+%	Dose-response assay of parasite growth against drug exposure (DELI).&2015-2016&Lab/Analyst\\
+%	Image analysis of peptide arrays. Phylogenetics of vaccine candidates.&2014-2015&Data analyst\\
+%	%Magnetic field exposure system. Biochemical sperm evaluation.&2013-2014&Laboratory\\
+%	Gene cloning, protein expression, conventional and quantitative PCR.&2012-2013&Laboratory\\
+%	%Stem-cell isolation and cryopreservation. Oocyte-sperm interaction.&2012-2013&Laboratory\\ 
+%	%  
+%	% to assess growth response against drug exposure
+%	%, DELI assay dose-response analysis of parasite growth against drug exposure
+%\end{tabular}\\
 
-\section{\sc Financing obtained}
+\section{\sc Grants, Awards and Recognitions}
 
 \begin{tabular}{ l l l }
-	Mitochondrial activity after sperm capacitation in  Alpaca.&~~~~~~~2015&~~~~~S/1,500.00\\
-	{\em In vitro} effect of Magnetic Fields on the sperm motility of Alpacas.&~~~~~~~2014&~~~~~S/1,500.00\\
-%	Cryopreservation of Spermatogonial Stem Cells of Alpaca.&~~~~~~~2012&~~~~~S/1,500.00\\
+	
+	\textbf{Scholarship}. Emerge Training Grant NIH/FIC TG D43 TW007393 &2018&~USD 10,644\\ %S/36,000.00
+	%International Center.%Master in Science in Epidemiological Research. 
+	%{\em Camelid Reproduction Group}.
+	% &&\\
+	
+	%\textbf{Consultancy}. Serological surveillance of malaria disease in Iquitos, Peru.&2017&~S/8,000.00\\
+	%UNAP y Fundaci\'on para el Desarrollo Sostenible de la Amazon\'ia Baja.
+	%{\em Camelid Reproduction Group}.
+	% &&\\
+	
+	\textbf{Grant}. Undergraduate research: Camelid Reproduction Group - UNMSM&2014&~USD 500\\ %S/1,500.00
+	%\href{http://www.bioem2015.org/Program.pdf}{\ExternalLink}
+	%Undergraduate Groups dedicated to research, innovation and transference.%141008GE-%Vicerrectorado de Investigaci\'on
+	%{\em Camelid Reproduction Group}.
+	% &&\\
+	%Vicerrectorado de Investigaci\'on - UNMSM&&\\
+	%	Cryopreservation of Spermatogonial Stem Cells of Alpaca.&~~~~~~~2012&~~~~~S/1,500.00\\
+	
+	{\bf Ranked 1\textsuperscript{st}}. UPCH X Summer Course on Molecular Biology (40 students)& 2013 & \\
+	%\href{https://www.facebook.com/CursoEpiMol/photos/513611698680320}{\ExternalLink}
+	%Highest grade among 40 graduate and undergraduate students.
+	% &&\\%[4pt] %in this intensive summer course.
+	
+	{\bf Ranked 1\textsuperscript{st}}. UNMSM Admission Test to Basic Sciences (1000 applicants)& 2011 & \\
+	%\href{https://www.scribd.com/document/153210842/San-Marcos-al-Dia}{\ExternalLink}
+	%Highest score among Basic Sciences Faculties from 1000 applicants.
+	% &&\\%\vspace*{.05in}\\
+	
 \end{tabular}\\
 
 %\section{\sc Data Science Skills}%Experienced in the Statistical computing software...
@@ -279,15 +365,25 @@ Quantitative biology, Reproducible science, Free software solutions, and Open sc
 
 \section{\sc Computational Skills}
 \begin{tabular}{ l l}
-	{\bf Programming Language}: & Python, Perl, Bash (Unix shell), SQL.\\
+	{\bf Statistical programming}: & R (work-in-progress: %work-in-progress 
+	\href{https://avallecam.github.io/serosurvey/}{\texttt{serosurvey}}, 
+	\href{https://github.com/avallecam/epichannel}{\texttt{epichannel}}, 
+	\href{https://github.com/avallecam/epitidy}{\texttt{epitidy}}, 
+	\href{https://github.com/avallecam/powder}{\texttt{powder}}, 
+	\href{https://github.com/avallecam?tab=repositories}{\texttt{+}}%, 
+	%\href{https://github.com/avallecam/elixr}{\texttt{elixr}}
+	).\\ 
+	%\href{https://github.com/horaciochacon/ENDES.PE}{\texttt{ENDES.PE}} 
+	%\href{https://github.com/avallecam/covid19viz}{\texttt{covid19viz}}).\\ % ADD YOUR ELIXIR PACKAGE + REPRODUCIBLE WORKFLOWS
+	%{\bf Bioinformatics}: & Arlequin, MrBayes, Artemis, VMD, PyMol, ImageJ, Ape.\\
+	{\bf Programming Language}: & Bash (Unix shell, fluent), Python (basic), Stata (fluent).\\ %Perl %SQLite %Unix shell SQL (basic)
 	%Applications: Numerical integration and Population dynamics simulations.\\
-	{\bf Statistical package}: & R: \texttt{limma}, \texttt{drc}, \texttt{Hmisc}, \texttt{tidyverse}, \texttt{knitr}, \texttt{Diagrammer}.\\
-	{\bf Bioinformatics}: & Arlequin, MrBayes, Artemis, VMD, PyMol, Ape.\\
-	{\bf Operating System}: & GNU/Linux (Ubuntu distribution).\\ %%, Windows, OSX
-	{\bf Document preparation}: & \LaTeX, R Markdown.\\ %SublimeText.%
+	{\bf OS, Text editor, \& more}: & GNU/Linux (Ubuntu). \LaTeX, R Markdown. SublimeText. Git.\\ %%, Windows, OSX
+	%{\bf Document preparation}: & \LaTeX, R Markdown.\\ %SublimeText.%
+	%{\bf Text editor}: & SublimeText.\\ %SublimeText.%
 	%using \texttt{knitr} package and Pandoc
 	%%Word processor software  %, LibreOffice Writer, MS Word.\\	, LibreOffice, MS Office
-	{\bf Version control}: & Git.%\\ %% ADD LINK!! %%  and repository
+	%{\bf Version control}: & Git.%\\ %% ADD LINK!! %%  and repository
 	%{\bf Image processing}: & \texttt{ImageJ} for relative quantification of synthetic peptide arrays.\\
 	%{\bf Image processing and editing software}: & ImageJ, GIMP.\\ %Photoshop
 	%Applications: Relative quantification of synthetic peptide arrays. Professional photo editing\\
@@ -295,7 +391,7 @@ Quantitative biology, Reproducible science, Free software solutions, and Open sc
 	%{\bf Bioinformatics}: & Applications to phylogenetics, genome assembly, and structural genomics.%\\
 	%and genome assembly
 	%software: (Arlequin, DnaSP, PhyML, MrBayes, BEAST, MEGA), (MODELLER, GROMACS, VMD, PyMol), (Artemis)
-\end{tabular}\\
+\end{tabular}
 
 %\section{\sc Bioinformatic Skills}
 %\begin{tabular}{l l}
@@ -322,22 +418,23 @@ Quantitative biology, Reproducible science, Free software solutions, and Open sc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-\section{\sc Personal Achievements}
-
-{\bf Ranked 1\textsuperscript{st} at the UPCH X Course and Workshop on Molecular\\Biology Techniques Applied to Infectious and Tropical Diseases} \hfill Jan 2013\\
-Highest grade among 40 graduate and undergraduate students. %in this intensive summer course.
-
-{\bf Ranked 1\textsuperscript{st} at the UNMSM Public University Admission Test} \hfill Mar 2011\\
-Highest score among the Basic Sciences Faculties from a total of 1000 applicants.\\%\vspace*{.05in}\\
-
-\section{\sc Teaching experience}
+\section{\sc Teaching experience at university}
 %Invited teacher for the following third-year undergraduate elective courses: \\
 %{\bf Biomathematics}:  {\em Population dynamics}. \hfill {December 2015}\\ Discrete modeling methods in Ecology. \\ %%Graph theory and Linear algebra 
-{\bf Bioinformatics}: Data analysis of microarray based experiments. \hfill {2017-I}\\ Design, statistics and visualization using Bioconductor and Tidyverse in R. \\[4pt] 
-{\bf Biomathematics}: Gene Regulatory Networks. \hfill {2015/16/17-I/II}\\ GRN topology and dynamics using Graph Theory and Finite Automata. \\[4pt] %% Graph theory to model Topology and Automata Networks for Dynamics of GRN %% Modeling of Networks
-{\bf Horizontal Gene Transfer}: On \#tardigate and HGT bioinformatics. \hfill {2016-II}\\ 
-Review of the controversy around the first tardigrade genome. \\
+{\bf Epidemiology}: Teacher Assistant. Master of Science in Epidemiological Research \href{https://www.posgradoupch.pe/programa/maestria-en-ciencias-en-investigacion-epidemiologica/#1479997658201-821008b1-6b83}{\ExternalLink}. \hfill {2019}\\In charge of practical sessions, monthly reviews, and test correction. \textit{48 grad students}. \\[4pt] %% Graph theory to model Topology and Automata Networks for Dynamics of GRN %% Modeling of Networks
+%{\bf Biostatistics}: Epidemiological analysis using R (\href{https://github.com/avallecam/epistat2019}{\includegraphics[scale=.004]{../figure/gh_logo.png}: epistat2019}). \hfill {2019}\\ Applications to case-control, cohort and time to event study designs. 30 students. \\[4pt] 
+%{\bf Bioinformatics}: Microarray data analysis using R (\href{https://github.com/avallecam/bioinfo2019}{\includegraphics[scale=.004]{../figure/gh_logo.png}: bioinfo2019}).  \hfill {2017/19}\\ Designs, statistics and visualizations with \texttt{Bioconductor} and \texttt{Tidyverse}. 50/20 students. \\[4pt] 
+{\bf Biomathematics}: [Gene Regulatory Networks: Topology and Dynamics] \href{https://drive.google.com/file/d/1S_cg8BC8iYXqJKb8RFR6iU8ophhMnGFx/view?usp=sharing}{\ExternalLink}. \textit{3 hours}. \hfill {2015-18}\\ Applications from Graph Theory and Finite Automata. \textit{10 undergrad students}. \\[4pt] %% Graph theory to model Topology and Automata Networks for Dynamics of GRN %% Modeling of Networks
+{\bf Horizontal Gene Transfer}: [On \#tardigate and HGT bioinformatics] \href{https://drive.google.com/file/d/1UfmbnVV8pmrAZD9S93G-sTT2d-bWDn6r/view?usp=sharing}{\ExternalLink}. \textit{2 hours}. \hfill {2016}\\ 
+Review of the controversy around the first tardigrade genome. \textit{5 undergrad students}. %\\
 
+%\newpage
+
+\section{\sc Teacher in extracurricular courses or presentations}
+{\bf Biostatistics}: [Introduction to Inferential Statistics for biologist] (\href{https://github.com/avallecam/biostat2019}{\includegraphics[scale=.004]{../figure/gh_logo.png}: biostat2019}). \textit{6 hours}. \hfill {2019}\\ Introduction to R, Linear models and Multiple comparison. \textit{40 students}. \\[4pt] 
+{\bf Epidemiology}: [How to use R in Epidemiology?] (\href{https://github.com/avallecam/epiapli2019}{\includegraphics[scale=.004]{../figure/gh_logo.png}: epiapli2019}). \textit{1 hour}. \hfill {2019}\\ Applications to descriptive and analytic epidemiology. \textit{25 participants}. \\[4pt] 
+{\bf Epidemiology}: [Epidemiological analysis using R] (\href{https://github.com/avallecam/epistat2019}{\includegraphics[scale=.004]{../figure/gh_logo.png}: epistat2019}). \textit{4 hours}. \hfill {2019}\\ Applications to case-control, cohort and time to event study designs. \textit{30 students}. \\[4pt] 
+{\bf Bioinformatics}: [Microarray data analysis using R] (\href{https://github.com/avallecam/bioinfo2019}{\includegraphics[scale=.004]{../figure/gh_logo.png}: bioinfo2019}). \textit{6 hours}.  \hfill {2017/19}\\ Design, statistics and graphics with \texttt{Bioconductor} and \texttt{Tidyverse}. \textit{50/20 students}. \\
 
 %\section{\sc Complementary activities}
 %{\bf IT training}: CISCO-IT Essentials: PC Hardware and Assembly. UNI. Lima-Peru. \hfill {Jan 2015} \\
@@ -348,45 +445,82 @@ Review of the controversy around the first tardigrade genome. \\
 %\section{\sc International training}
 \section{\sc Complementary education}
 
-{\bf CODATA-RDA School in Research Data Science}\hfill {Dec 2017}\\
-	\vspace*{-.1in}%Selected with complete financial support
-\begin{list2} %Job Description%
-	\item Two weeks on database management, machine learning and infrastructure.%\textit{Experience:}
-	\item ICTP-SAIFR. IFT-UNESP, S{\~a}o Paulo - Brazil. %International Center for Theoretical Physics - South American Institute for Fundamental Research (ICTP-SAIFR). IFT-UNESP, Sao Paulo- Brazil.%\textit{Organized by:} 
-\end{list2}
-
-{\bf Wellcome Genome Campus Advanced Courses:\\Working with Parasite Data Resources}\hfill {Oct 2016}\\
-	\vspace*{-.1in}%Complete financial support
-\begin{list2} %Job Description%
-	\item One week on genomic, proteomic, metabolomic applications of \texttt{eupathdb.org}.
-%	\item \textit{Venue:} Instituto del Higiene, Montevideo, Uruguay.%\\
-	\item Wellcome Trust Sanger Institute, UK. Montevideo - Uruguay.%\\ %with EuPathDB and 
-	%Resource Center the Eukaryotic Pathogen Bioinformatics Resource Center 
-%	\item \textit{Time:} 35h
-\end{list2}
-
-{\bf Workshop EPONGE: Epidemiology meets Population Genetics}\hfill {Oct 2016}\\
-	\vspace*{-.1in}
-\begin{list2} %Job Description%
-	\item One week on theory and update topics, including bayesian inference methods.
-	\item University of Antwerp y UPCH. Lima - Peru.
-	%\item \textit{Organized by:} Global Health Institute - University of Antwerp and UPCH %and UNAP.%\\
-	%\item \textit{Time:} 30h
-\end{list2}
-
+{\bf Outbrake Analytics and Modelling for Public Health \href{https://www.ins.gov.co/modelamiento/modelamiento.html}{\ExternalLink} \href{https://github.com/avallecam/recon_r}{\includegraphics[scale=.004]{../figure/gh_logo.png}} }\hfill {Jun 2019}\\
+-One week on dynamic modeling in response to outbrakes and interventions.\\
+-Imperial College London, UK (ICL), Pontificia Universidad Javeriana, Bogotá - Colombia.\\
+-Complete scholarship.\\[4pt] 
+%\vspace*{-.1in}%Selected with complete financial support
+%\begin{list2} %Job Description%
+%	\item One week on dynamic modeling in response to outbrakes and interventions.%\textit{Experience:}
+%	\item Imperial College London, UK (ICL), Pontificia Universidad Javeriana, Bogotá - Colombia.
+%	\item Complete scholarship
+%\end{list2}
+{\bf CODATA-RDA Research Data Science School 2017 \href{https://www.ictp-saifr.org/international-school-on-data-science/}{\ExternalLink} 2020 \href{http://indico.ictp.it/event/9113/}{\ExternalLink} }\hfill {2017/20}\\
+-Two weeks on data management, open science, machine learning and infrastructure.\\
+-ICTP-SAIFR. IFT-UNESP, S{\~a}o Paulo - Brazil.\\
+-Complete scholarship.\\[4pt] 
+%	\vspace*{-.1in}%Selected with complete financial support
+%\begin{list2} %Job Description%
+%	\item Two weeks on data management, open science, machine learning and infrastructure.%\textit{Experience:}
+%	\item ICTP-SAIFR. IFT-UNESP, S{\~a}o Paulo - Brazil.
+%	\item Complete scholarship 
+%	%International Center for Theoretical Physics - South American Institute for Fundamental Research (ICTP-SAIFR). IFT-UNESP, Sao Paulo- Brazil.%\textit{Organized by:} 
+%\end{list2}
+{\bf [Minicourse on Spatio-Temporal Models in Epidemiology] \href{http://www.cipefa2017.uni.edu.pe/}{\ExternalLink} }\hfill {Oct 2017}\\
+-I International Conference of Stochastic Processes, Random phenomena and Applications.\\
+-Theory and practice of areal data, point pattern analysis and geostatistics.\\
+-Universidad Nacional de Ingeniería (UNI), Lima - Peru.\\[4pt]
+%\vspace*{-.1in}%Complete financial support %https://www.facebook.com/watch/live/?v=138898310077939&ref=watch_permalink
+%\begin{list2} %Job Description%
+%	\item I International Conference of Stochastic Processes, Random phenomena and Applications.% \textit{Experience:}
+%	\item Theory and practice of areal data, point pattern analysis and geostatistics.
+%	\item Universidad Nacional de Ingeniería (UNI), Lima - Peru.%\textit{Organized by:} 
+%\end{list2}
+{\bf Working with Parasite Database Resources \href{https://coursesandconferences.wellcomegenomecampus.org/our-events/working-with-parasite-database-resources-2016-montevideo-uruguay-2016/}{\ExternalLink}}\hfill {Oct 2016}\\
+-One week on genomic, proteomic, metabolomic applications of \texttt{eupathdb.org}.\\
+-Wellcome Trust Sanger Institute, UK. Montevideo - Uruguay.\\
+-Complete scholarship.\\[4pt]
+%\href{https://veupathdb.org/veupathdb/app}{\texttt{eupathdb.org}}
+% {\bf Wellcome Genome Campus Advanced Courses:\\Working with Parasite Data Resources}\hfill {Oct 2016}\\
+% 	\vspace*{-.1in}%Complete financial support
+% \begin{list2} %Job Description%
+% 	\item One week on genomic, proteomic, metabolomic applications of \texttt{eupathdb.org}.
+% %	\item \textit{Venue:} Instituto del Higiene, Montevideo, Uruguay.%\\
+% 	\item Wellcome Trust Sanger Institute, UK. Montevideo - Uruguay.
+% 	\item Complete scholarship 
+% 	%\\ %with EuPathDB and 
+% 	%Resource Center the Eukaryotic Pathogen Bioinformatics Resource Center 
+% %	\item \textit{Time:} 35h
+% \end{list2}
+% {\bf Workshop EPONGE: Epidemiology meets Population Genetics}\hfill {Oct 2016}\\
+% 	\vspace*{-.1in}
+% \begin{list2} %Job Description%
+% 	\item One week on theory and update topics, including bayesian inference methods.
+% 	\item University of Antwerp y UPCH. Lima - Peru.
+% 	\item Complete scholarship 
+% 	%\item \textit{Organized by:} Global Health Institute - University of Antwerp and UPCH %and UNAP.%\\
+% 	%\item \textit{Time:} 30h
+% \end{list2}
+%{\bf School on Physics Applications in Biology}\hfill {Jan 2016}\\
+%-Three weeks on game theory, non-linear dynamics and statistical physics.\\
+%-ICTP-SAIFR. IFT-UNESP, S{\~a}o Paulo - Brazil.\\
+%-Complete scholarship.\\[4pt]
 %{\bf School on Physics Applications in Biology}\hfill {Jan 2016}\\
 %	\vspace*{-.1in}%Selected with complete financial support
 %\begin{list2} %Job Description%
 %	\item Three weeks on game theory, non-linear dynamics and statistical physics.%\textit{Experience:}
 %	\item ICTP-SAIFR. IFT-UNESP, S{\~a}o Paulo - Brazil. %International Center for Theoretical Physics - South American Institute for Fundamental Research (ICTP-SAIFR). IFT-UNESP, Sao Paulo- Brazil.%\textit{Organized by:} 
 %\end{list2}
-
-{\bf V Southern-Summer School on Mathematical Biology}\hfill {Jan 2016}\\
-	\vspace*{-.1in}%Complete financial support
-\begin{list2} %Job Description%
-	\item One week on population dynamics modeling in ecology and epidemiology.% \textit{Experience:}
-	\item ICTP-SAIFR. IFT-UNESP, S{\~a}o Paulo - Brazil.%\textit{Organized by:} 
-\end{list2}
+{\bf V Southern-Summer School on Mathematical Biology \href{http://ecologia.ib.usp.br/ssmb/doku.php}{\ExternalLink}}\hfill {Jan 2016}\\
+-One week on population dynamics modeling in ecology and epidemiology.\\% \textit{Experience:}
+-ICTP-SAIFR. IFT-UNESP, S{\~a}o Paulo - Brazil.\\%\textit{Organized by:} 
+-Complete scholarship.\\
+%	\vspace*{-.1in}%Complete financial support
+%\begin{list2} %Job Description%
+%	\item One week on population dynamics modeling in ecology and epidemiology.% \textit{Experience:}
+%	\item ICTP-SAIFR. IFT-UNESP, S{\~a}o Paulo - Brazil.%\textit{Organized by:} 
+%	\item Complete scholarship \\
+%\end{list2}
 
 %{\bf Workshop on morphogenesis, models and evolution of \\developmental mechanisms}\hfill {Sep 2015}\\%http://c3.unam.mx/calendario/Externos/20150619141256220
 %\vspace*{-.1in}%Complete financial support
@@ -425,12 +559,12 @@ Review of the controversy around the first tardigrade genome. \\
 %%	\item \textit{Time:} 20h
 %\end{list2}
 
-{\bf Latin-American training workshop on molecular epidemiology \\applied to infectious diseases}\hfill {Nov 2013}\\
-	\vspace*{-.1in}%Invited by the institution
-\begin{list2} %Job Description%
-	\item One week on genotyping and informatics for tuberculosis and malaria research. %leishmania, 
-	\item ITM-Antwerp and IMTAvH-UPCH, Lima - Peru.\\% organaized by ITM-Antwerp (Belgium) and 
-\end{list2}
+%{\bf Latin-American training workshop on molecular epidemiology \\applied to infectious diseases}\hfill {Nov 2013}\\
+%	\vspace*{-.1in}%Invited by the institution
+%\begin{list2} %Job Description%%
+%	\item One week on genotyping and informatics for tuberculosis and malaria research. %leishmania, 
+%	\item ITM-Antwerp and IMTAvH-UPCH, Lima - Peru.\\% organaized by ITM-Antwerp (Belgium) and 
+%\end{list2}
 
 %{\bf Basic Course-Workshop: Gene cloning and protein expression by \\recombinant DNA techniques}\hfill {Aug 2012}\\
 %	\vspace*{-.1in}
@@ -440,28 +574,50 @@ Review of the controversy around the first tardigrade genome. \\
 %	%\textit{Time:} 60h
 %\end{list2}
 
-\section{\sc Languages}
-{\bf English}: Advance level in Reading, Speaking and Writing.\\
-{\bf Spanish}: Advance level in Reading, Speaking and Writing. Mother tongue.\\
+\section{\sc Certifications}
+{\bf Biomedical Research - Basic/Refresher}: CITI program. Expiration date: 04 May 2021.\\
+{\bf Responsible Conduct in Research}: QUIPU program - Peru. Completition date: 05 May 2018.\\
+{\bf English}: Advance level complete (26 Feb. 2014). TOEFL score: 88 (21/23/20/24) (14 Dic 2020).\\
+
+%\section{\sc Languages}
+%{\bf English}: Advance level in Reading, Speaking and Writing. (Mother tongue: Spanish)\\
+%{\bf Spanish}: Advance level in Reading, Speaking and Writing. .\\
 %{\bf English}: Advance Level complete. BRITANICO Institute. Lima-Peru. \hfill {2012-2014} \\%Set Feb 
+
+%\section{\sc Hobbies }
+
 
 \section{\sc References }
 
 \begin{tabular}{ l l }
-	G. Christian Baldeviano, PhD & Head, Immunology and Vaccine Development Unit \\
-	Advisor & Naval Medical Research Unit Six (NAMRU-6)\\
+	Cesar V. Munayco, PhD & Chief, Epidemiological Research and Intervention Evaluation Group\\
+	Advisor & Center for Epidemiology and Disease Control (CDC Peru).\\
+	2019 - now & cvmunayco@gmail.com\\ %andres.lescano.g@upch.pe\\
+	&\\
+	Andr\'es G. Lescano, PhD & Professor, Coordinator, MSc and PhD in Epidemiological Research\\
+	Advisor & Universidad Peruana Cayetano Heredia (UPCH), Peru.\\
+	2017 - 2019 & willy.lescano@upch.pe\\ %andres.lescano.g@upch.pe\\
+
+	&\\
+	G. Christian Baldeviano, PhD & Head, Immunology and Vaccine Development Unit (NAMRU-6)\\
+	Advisor & Now: Associate Director at bluebird bio, United States.\\
 	2014 - 2017 & gbaldevi@gmail.com\\
-	&\\
-	Viviana Pinedo Cancino, PhD, MSc & Research scientist and General Coordinator\\
-	Supervisor & Universidad Nacional de la Amazon\'ia Peruana (UNAP)\\
-	2016 - 2017 & vivi\_vane@hotmail.com\\
-	%Andres G. Lescano, MSH, PhD & Professor and Coordinator, Masters' in Epidemiological Research\\
-	%Advisor & Universidad Peruana Cayetano Heredia (UPCH)\\
-	%Jan 2014 - Jun 2015 & andres.lescano.g@upch.pe\\
-	&\\
-	Prof. Walter Cabrera-Febola & Chief, Group of Natural Structures and Theoretical Research \\
-	Teacher & Universidad Nacional Mayor de San Marcos (UNMSM)\\
-	2013 - 2015 & febcawal@gmail.com\\	
+	%&\\
+	
+	%Prof. Walter Cabrera-Febola & Chief, Group of Natural Structures and Theoretical Research \\
+	%Teacher & Universidad Nacional Mayor de San Marcos (UNMSM)\\
+	%2013 - 2015 & febcawal@gmail.com\\	
+	
+	%Kelika Konda, PhD. & Associated Researcher, CIISSS-UPCH\\
+	%Teacher & Assistant Professor, David Geffen School of Medicine. UCLA Health\\
+	%2017 - 2018 & kelika.konda@upch.pe\\
+	%&\\
+	
+	%Viviana Pinedo Cancino, PhD. & Research scientist and General Coordinator\\
+	%Supervisor & Universidad Nacional de la Amazon\'ia Peruana (UNAP)\\
+	%2016 - 2017 & vivi\_vane@hotmail.com\\
+	
+	
 \end{tabular}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
