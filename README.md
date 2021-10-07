@@ -6,7 +6,7 @@ The current CV is based on the following templates:
 
 - http://www.stat.berkeley.edu/~paciorek/computingTips/Latex_template_creating_CV_.html
 
-- https://www.rpi.edu/dept/arc/training/latex/resumes/
+- https://www.rpi.edu/dept/arc/training/latex/resumes/ (res9b)
 
 ## REMEMBER:
 
