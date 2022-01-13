@@ -3,6 +3,7 @@ current/*.log
 current/*.gz
 current/*.aux
 current/*.cls
+current/cover_VALLE.tex
 spanish/*.pdf
 spanish/*.log
 spanish/*.gz
@@ -11,7 +12,6 @@ spanish/*.cls
 template/*
 release-pdf/*
 sample-pdf/*
-figure/*
 cv-release-pdf/*
 cv-sample-pdf/*
 */*.out
