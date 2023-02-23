@@ -8,6 +8,11 @@ The current CV is based on the following templates:
 
 - https://www.rpi.edu/dept/arc/training/latex/resumes/ (res9b)
 
+## REPRODUCIBILITY
+
+- To write in LaTex I use [TekStudio](https://www.texstudio.org/) as a GUI.
+- To download the packages needed to render the PDF files I use [MikTex console](https://miktex.org/download)
+
 ## REMEMBER:
 
 - use './makefile/render.bash' to **copy** these 3 '.pdf' 
